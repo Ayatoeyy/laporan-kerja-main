@@ -1,0 +1,104 @@
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header User */
+.user-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Tambahkan efek transisi */
+  font-size: 16px;
+}
+
+.menu-item i {
+  margin-right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease; /* Efek transisi untuk ikon */
+}
+
+.menu-item span {
+  transition: transform 0.3s ease; /* Efek transisi untuk tulisan */
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #007bff;
+}
+
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover {
+  background-color: #0056b3;
+}
+
+.avatar-input {
+  display: block;
+  margin: 10px auto;
+  font-size: 0.8rem;
+}
+/* Hover Effect */
+.menu-item:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+}
+
+.menu-item:hover i,
+.menu-item:hover span {
+  transform: translateX(5px); /* Geser tulisan dan ikon ke kanan */
+}
+
+/* Aktif (Clicked) */
+.menu-item.active {
+  background-color: #d4edda; /* Hijau muda */
+  color: #155724; /* Hijau gelap */
+  font-weight: bold;
+}
+
+.menu-item.active i,
+.menu-item.active span {
+  transform: translateX(5px); /* Geser tulisan dan ikon ke kanan */
+}
+
+.menu-item.active i {
+  color: #155724; /* Ikon hijau gelap */
+}

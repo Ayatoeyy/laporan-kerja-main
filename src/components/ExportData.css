@@ -1,0 +1,22 @@
+.export-options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .export-options button {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .export-options button:hover {
+    background: #ddd;
+  }
+  

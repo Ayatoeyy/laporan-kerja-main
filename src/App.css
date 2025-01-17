@@ -1,0 +1,89 @@
+/* Reset Margin dan Padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex; /* Flex untuk sidebar dan konten */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #eef5e9;
+  padding: 20px 10px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.main-content {
+  margin-left: 220px; /* Sama dengan lebar sidebar */
+  width: calc(100% - 220px); /* Sisa ruang setelah sidebar */
+  height: 100vh;
+  overflow-y: auto; /* Tambahkan scroll jika konten lebih panjang */
+  transition: margin-left 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.content-container {
+  padding: 20px;
+}
+
+/* Media Query untuk Responsif */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .main-content {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    position: absolute;
+    width: 180px;
+    left: -180px;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
